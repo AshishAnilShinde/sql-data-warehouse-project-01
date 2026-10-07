@@ -17,8 +17,6 @@ Sales, customer and product data lived in **two separate systems (CRM and ERP)**
 
 ## 🏗️ Architecture
 
-![Data Architecture](docs/data_architecture.png)
-
 | Layer | Purpose | How |
 |---|---|---|
 | 🥉 **Bronze** | Raw data, exactly as received | `BULK INSERT` via stored procedure |
@@ -53,8 +51,6 @@ Sales, customer and product data lived in **two separate systems (CRM and ERP)**
 ---
 
 ## ⭐ Data Model (Gold Layer)
-
-![Data Model](docs/data_model.png)
 
 - `gold.dim_customers` – customer details from CRM and ERP combined
 - `gold.dim_products` – product, category and cost details
@@ -97,10 +93,6 @@ ORDER BY total_sales DESC;
 └── tests/      # Data quality checks
 ```
 
-📚 More docs: [Data Catalog](docs/data_catalog.md) · [Naming Conventions](docs/naming_conventions.md)
-
----
-
 ## 🗒️ Notes & Next Steps
 
 - Covers the latest data snapshot only; historical tracking is not implemented
@@ -111,4 +103,3 @@ ORDER BY total_sales DESC;
 ## 👤 About Me
 
 **Ashish** · Software Engineer moving into Data Analytics · Pune, India
-[LinkedIn](#) · [GitHub](#)
