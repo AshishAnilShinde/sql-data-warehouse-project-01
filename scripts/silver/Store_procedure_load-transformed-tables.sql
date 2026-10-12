@@ -46,7 +46,7 @@ BEGIN
 			(SELECT
 			*,
 			ROW_NUMBER () OVER (PARTITION BY cst_id ORDER BY cst_create_date DESC) AS flag_last
-			FROM bronze.crm_cust_info)t
+			FROM bronze.crm_cust_info WHERE cst_id IS NOT NULL)t
 		WHERE flag_last = 1;
 
 		SET @end_time = GETDATE();
